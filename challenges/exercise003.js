@@ -6,6 +6,27 @@ export function getSquares(nums) {
 export function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
   // Your code here!
+  
+if(words.length>1)
+{
+ let newarr= words.split(",");
+ array.forEach(element => {
+  newarr.push(element[0].subsubstr( 0, 1 ).toLowerCase() + element.substr( 1 ));
+
+  console.log(newarr);
+  return newarr;
+});
+  
+}else{
+  newarr.push(words.charAt[0].toLowerCase() + words.substr( 1 ));
+
+  console.log(newarr);
+  return newarr;
+}
+
+
+
+
 }
 
 export function getTotalSubjects(people) {
