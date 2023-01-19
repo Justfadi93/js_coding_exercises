@@ -94,4 +94,14 @@ export function duplicateNumbers(arr1, arr2) {
   if (arr1 === undefined) throw new Error("arr1 is required");
   if (arr2 === undefined) throw new Error("arr2 is required");
   // Your code here!
+
+  let commonArray = arr1.filter((x) => arr2.includes(x));
+  let removeDuplicates = commonArray.filter(
+    (item, index) => commonArray.indexOf(item) === index
+  );
+  return removeDuplicates.sort();
+
+  // console.log("The filtered array is : " + commonArray);
+
+  // return arr1.filter((x) => arr2.includes(x));
 }
