@@ -14,34 +14,13 @@ export function getSquares(nums) {
 export function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
   // Your code here!
-  // let mewwords = words.split(',');
+  // let newstr = words.replace(/\b[a-z]/g, (x) => x.toUpperCase());
 
-  let newstr = words.replace(/\b[a-z]/g, (x) => x.toUpperCase());
+  let camelCase = words.replace(/(\s+\w)/g, function (match) {
+    return match[1].toUpperCase();
+  });
 
-  console.log("Hello ", newstr);
-
-  // for (let i = 1; i < mewwords.length; i++)
-  // {
-  //   mewwords[i] = mewwords[i][0].toUpperCase() + mewwords[i].slice(1);
-  // }
-  // return mewwords.join('');
-
-  // if(words.length>1)
-  // {
-  //  let newarr= words.split(",");
-  //  array.forEach(element => {
-  //   newarr.push(element[0].subsubstr( 0, 1 ).toLowerCase() + element.substr( 1 ));
-
-  //   console.log(newarr);
-  //   return newarr;
-  // });
-
-  // }else{
-  //   newarr.push(words.charAt[0].toLowerCase() + words.substr( 1 ));
-
-  //   console.log(newarr);
-  //   return newarr;
-  // }
+  console.log("Hello ", camelCase);
 }
 
 export function getTotalSubjects(people) {
