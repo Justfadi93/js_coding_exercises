@@ -1,6 +1,5 @@
 export function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
 
   let smallNumberArray;
   smallNumberArray = nums.filter((x) => x < 1);
@@ -12,7 +11,6 @@ export function findSmallNums(nums) {
 export function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  // Your code here
 
   let namesArray = [];
   namesArray = names.filter((x) => x.startsWith(char));
@@ -22,7 +20,6 @@ export function findNamesBeginningWith(names, char) {
 
 export function findVerbs(words) {
   if (!words) throw new Error("words is required");
-  // Your code here
 
   let verbsArray = [];
   verbsArray = words.filter((x) => x.startsWith("to "));
@@ -33,7 +30,6 @@ export function findVerbs(words) {
 
 export function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
 
   let integerArray = [];
   integerArray = nums.filter((x) => Number.isInteger(x));
@@ -43,7 +39,7 @@ export function getIntegers(nums) {
 //tough one
 export function getCities(users) {
   if (!users) throw new Error("users is required");
-  // Your code here
+
   let newcities = [];
   // newcities = users
   //   .filter((x) => x.data.city)
@@ -62,7 +58,7 @@ export function getCities(users) {
 
 export function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+
   // let num1 = [9, 77, 12];
   let squareRootArray = [];
   squareRootArray = nums.map((x) => Math.sqrt(x));
@@ -86,7 +82,7 @@ export function getSquareRoots(nums) {
 export function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  // Your code here
+
   let regex = new RegExp(str, "i");
 
   return sentences.filter((x) => x.includes(x.match(regex)));
@@ -94,7 +90,6 @@ export function findSentencesContaining(sentences, str) {
 
 export function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
-  // Your code here
 
   let longestSides = triangles.map((sides) => Math.max.apply(null, sides));
 

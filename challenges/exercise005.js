@@ -1,7 +1,6 @@
 export const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
 
   let index = nums.indexOf(n);
   if (nums[index] === n) {
@@ -17,7 +16,6 @@ export const findNextNumber = (nums, n) => {
 
 export const count1sand0s = (str) => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
 
   let count = str.split("").reduce(
     function (acc, cur) {
@@ -36,7 +34,6 @@ export const count1sand0s = (str) => {
 
 export const reverseNumber = (n) => {
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
 
   let reversed = n.toString().split("").reverse().join("");
   return Number(reversed);
@@ -44,7 +41,7 @@ export const reverseNumber = (n) => {
 
 export const sumArrays = (arrs) => {
   if (arrs === undefined) throw new Error("arrs is required");
-  // Your code here!
+
   let conCatArray = [];
   arrs.map((x) => conCatArray.push(...x));
   let sumArray = conCatArray.reduce((acc, curr) => acc + curr, 0);
@@ -55,7 +52,7 @@ export const sumArrays = (arrs) => {
 
 export const arrShift = (arr) => {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
+
   if (arr.length < 2) return arr;
   let first = arr.shift();
   let last = arr.pop();
@@ -67,9 +64,9 @@ export const arrShift = (arr) => {
 export const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
-  // Your code here!
 
   // val.toLowerCase().includes(search) || val.includes(search);
+  let regex = new RegExp(searchTerm, "i");
 
   return Object.values(haystack).some((val) =>
     val.toString().includes(searchTerm)
@@ -78,7 +75,7 @@ export const findNeedle = (haystack, searchTerm) => {
 
 export const getWordFrequencies = (str) => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
+
   let s = str.replace(/[^\w\s]/gi, "");
   let words = s.toLowerCase().match(/\b[a-z']+\b/g);
   let frequency = {};

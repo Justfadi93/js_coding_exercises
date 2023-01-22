@@ -5,10 +5,8 @@
 
 export function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
 
   const para = word.substring(0, 1).toUpperCase();
-  // console.log(para + word.substring(1,word.length));
 
   return para + word.substring(1, word.length);
 }
@@ -16,9 +14,7 @@ export function capitalize(word) {
 export function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  // Add your code here!
 
-  // console.log(firstName.charAt(0).toUpperCase() + "." + lastName.charAt(0).toUpperCase());
   return (
     firstName.charAt(0).toUpperCase() + "." + lastName.charAt(0).toUpperCase()
   );
@@ -27,28 +23,23 @@ export function generateInitials(firstName, lastName) {
 export function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
-  // Add your code here!
 
   let finalvalue = (vatRate / 100) * originalPrice;
 
   if (Number.isInteger(originalPrice)) {
     finalvalue = finalvalue + originalPrice;
-    // console.log(finalvalue);
     return finalvalue;
   } else {
     finalvalue = finalvalue + originalPrice;
-    // console.log(finalvalue);
 
     let newvalue = numberRoundDecimal(finalvalue, 2);
     return newvalue;
-    // return finalvalue.toFixed(2);
   }
 }
 
 export function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
-  // Add your code here!
   originalPrice = originalPrice.toFixed(2);
   let reducevalue = (reduction / 100) * originalPrice;
 
@@ -60,7 +51,6 @@ export function getSalePrice(originalPrice, reduction) {
 
 export function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  // Add your code here!
 
   let strlength = str.length;
 
@@ -77,28 +67,24 @@ export function getMiddleCharacter(str) {
 
 export function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
-  // console.log(word.split('').reverse().join(''));
   return word.split("").reverse().join("");
 }
 
 export function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Add your code here!
-  // console.log(words.split('').reverse().join(''));
+
+  // return reverseWord(words);
 
   return words.split("").reverse().join("");
 }
 
 export function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  // Add your code here!
 
   const count = users.filter((item) => item.type === "Linux").length;
 
   if (count > 0) {
     return count;
-    // console.log(count);
   } else {
     return 0;
 
@@ -108,7 +94,7 @@ export function countLinuxUsers(users) {
 
 export function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
-  // Add your code here!
+
   let mean = 0;
   let scoreLength = scores.length;
   let sum = scores.reduce(function (a, b) {
@@ -116,11 +102,8 @@ export function getMeanScore(scores) {
   });
   mean = sum / scoreLength;
   if (mean.isInteger) {
-    // console.log(mean);
     return mean;
   } else {
-    // console.log(numberRoundDecimal(mean,2));
-
     let newmean = numberRoundDecimal(mean, 2);
     return newmean;
   }
@@ -128,7 +111,6 @@ export function getMeanScore(scores) {
 
 export function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
-  // Add your code here!
   if (n % 3 === 0 && n % 5 != 0) {
     return "fizz";
   }
